@@ -9,7 +9,7 @@ var port = process.env.PORT || 3030;
 const url = 'https://api.github.com/user/starred';
 
 app.use(cors({
-    origin: 'http://localhost:5173' 
+    origin: ['http://localhost:5173', 'https://oliverthomas93.github.io/portfolio_V3/'] 
 }));
 
 app.get('/getrepos', async function (req,res) {
