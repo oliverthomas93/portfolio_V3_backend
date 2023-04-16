@@ -4,12 +4,12 @@ import cors from 'cors';
 import * as dotenv from 'dotenv'
 dotenv.config();
 var app = express();
-var port = 3000;
+var port = process.env.PORT || 3030;
 
 const url = 'https://api.github.com/user/starred';
 
 app.use(cors({
-    origin: ['http://localhost:5173', 'https://portfolio-v3-backend.onrender.com/'] 
+    origin: 'http://localhost:5173' 
 }));
 
 app.get('/getrepos', async function (req,res) {
