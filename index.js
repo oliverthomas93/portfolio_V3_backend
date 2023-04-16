@@ -9,7 +9,7 @@ var port = 3000;
 const url = 'https://api.github.com/user/starred';
 
 app.use(cors({
-    origin: 'http://localhost:5173' 
+    origin: ['http://localhost:5173', 'https://portfolio-v3-backend.onrender.com/'] 
 }));
 
 app.get('/getrepos', async function (req,res) {
